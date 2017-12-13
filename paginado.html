@@ -1,0 +1,103 @@
+<!--Notese el script del final!!-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Paginado</h2>
+  <p>La clase .pagination class provee enlaces para cambio de paginas:</p>                  
+  <ul class="pagination">
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+  </ul>
+
+ <p>La clase .activa nos muestra la pagina actual:</p>                  
+<ul class="pagination">
+  <li><a href="#">1</a></li>
+  <li class="active"><a href="#">2</a></li>
+  <li><a href="#">3</a></li>
+  <li><a href="#">4</a></li>
+  <li><a href="#">5</a></li>
+</ul>
+
+<p>La clase .disabled nos desactiva una pagina:</p>                  
+<ul class="pagination">
+  <li><a href="#">1</a></li>
+  <li><a href="#">2</a></li>
+  <li><a href="#">3</a></li>
+  <li class="disabled"><a href="#">4</a></li>
+  <li><a href="#">5</a></li>
+</ul>
+
+
+
+<p>Como siempre lg o sm o xs, etc noas cambia el tamaño relativo:</p>                  
+
+<ul class="pagination pagination-lg">
+  <li><a href="#">1</a></li>
+  <li><a href="#">2</a></li>
+  <li><a href="#">3</a></li>
+  <li><a href="#">4</a></li>
+  <li><a href="#">5</a></li>
+</ul>
+
+<ul class="pagination pagination-sm">
+  <li><a href="#">1</a></li>
+  <li><a href="#">2</a></li>
+  <li><a href="#">3</a></li>
+  <li><a href="#">4</a></li>
+  <li><a href="#">5</a></li>
+</ul>
+
+
+<p>Tambien nos provee de seguimiento estilo "migas de pan":</p>                  
+<ul class="breadcrumb">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Private</a></li>
+  <li><a href="#">Pictures</a></li>
+  <li class="active">Vacation</li> 
+</ul>
+
+
+
+<p>Asimismo nos permite crear botones de paso de pagina:</p>                  
+<ul class="pager">
+  <li><a href="#">Previa</a></li>
+  <li><a href="#">Siguiente</a></li>
+</ul>
+
+
+<p>Las clases .previous y .next cambia la alineacion de los botones:</p>                  
+<ul class="pager">
+  <li class="previous"><a href="#">Previous</a></li>
+  <li class="next"><a href="#">Next</a></li>
+</ul>
+
+
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function () {
+    $('ul li a').click(function(e) {
+        $('ul li.active').removeClass('active');
+        var $parent = $(this).parent();
+        $parent.addClass('active');
+        e.preventDefault();
+    });
+});
+</script>
+
+
+</body>
+</html>
