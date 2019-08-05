@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" charset="UTF-8">
+	<title>Ejercicio - Bootstrap</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/estilo.css">
+	<!--
+		SE HACE USO DEL 'estilo.css' PARA CIERTAS COSAS, COMO UN MEDIAQUERY PARA RESIZEAR LA IMAGEN, DEFINIR ALGUNOS PADDINGS O MARGINS CUSTOMIZADOS
+		- LAS SIGUIENTES CLASES SON CUSTOMS...
+			* Post
+			* Post-Title
+	-->	
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<!-- Las 3 barritas que se muestran cuando la pantalla se achica para el menú -->
+				<div class="navbar-header">
+					<button class="navbar-toggle collapsed" type="button" data-target="#navbar-menu" data-toggle="collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>						
+					</button>
+
+					<!-- 'Logo o lo que sea en la parte izquierda' -->
+					<a href="#" class="navbar-brand">Mi Navbar</a>
+				</div>
+
+				<!-- Esto contiene todas las secciones, incluído lo de la derecha del nav -->
+				<div class="collapse navbar-collapse" id="navbar-menu">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#">Inicio</a></li>
+							<!-- Dropdown para las categorías-->
+							<li class="dropdown">
+								<a class="dropdown-toggle" id="dropdown-nav" data-toggle="dropdown" aria-extended="true">
+									Categorías <span class="caret"></span>
+								</a>
+								<ul class="dropdown-menu" role="menu" aria-labelledby="dropdown-nav">
+									<li role="presentation" class="dropdown-header">Tutoriales</li>
+									<li class="divider"></li>
+									<li role="presentation">
+										<a role="item" href="#">Categoría #1</a>
+									</li>
+									<li role="presentation">
+										<a role="item" href="#">Categoría #2</a>
+									</li>
+									<li role="presentation">
+										<a role="item" href="#">Categoría #3</a>
+									</li>
+									<li role="presentation">
+										<a role="item" href="#">Categoría #4</a>
+									</li>
+								</ul>
+							</li>
+						<li><a href="#">Blog</a></li>
+						<li><a href="#">Contacto</a></li>						
+					</ul>
+
+					<!-- Parte derecha del nav con el buscador y el botón -->
+					<form action="#" class="navbar-form navbar-right" role="search">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Buscar">
+						</div>
+						<button type="button" class="btn btn-primary">
+							<span class="glyphicon glyphicon-search"></span>
+						</button>
+					</form>
+				</div>
+			</div>				
+		</nav>
+	</header>
+
+	<!-- Banner grandote -->
+	<section class="jumbotron">
+		<div class="container">
+			<h1>Sitio de prueba</h1>
+			<p>Esto es un jumbotron. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+		</div>
+	</section>
+
+	<!-- Parte central del sitio con los artículos-->
+	<section class="main container">		
+		<div class="row">
+			<section class="col-md-9">
+				<!-- La sección donde estamos dentro del sitio -->
+				<div>
+					<ol class="breadcrumb">
+						<li><a href="#">Inicio</a></li>
+						<li><a href="#">Categorías</a></li>
+						<li class="active">Diseño Web</li>
+					</ol>
+				</div>
+
+				<!-- Artículo 1 -->
+				<article class="post clearfix">
+					<a href="#" class="thumbnail pull-left">
+						<img src="img/img1.png" class="img-responsive"/>
+					</a>	
+
+					<h2 class="post-title">
+						<a href="#">Título de la Imagen 1</a>
+					</h2>
+					<p><span class="post-fecha">30/05/2089</span> por <span><a href="#">Jonatan</a></span></p>
+					<p class="post-contenido text-justify">Las imagenes son grandes, por lo que se ajustan automaticamente. Los tres artículos estan dentro de un tag 'section', cada uno de ellos con un tag 'article'. Imagen - Título en H2 - Parrafo con spans y href - div conteniendo los dos botones en tag 'a', el último usando un span para el badge.</p>					
+
+					<div class="contenedor-botones">
+						<a href="#" class="btn btn-primary">Leer mas!</a>
+						<a href="#" class="btn btn-success">Comentarios 
+							<span class="badge">35</span>
+						</a>
+					</div>
+				</article>
+
+				<br>
+
+				<!-- Artículo 2 -->
+				<article class="post clearfix">
+					<a href="#" class="thumbnail pull-left">
+						<img src="img/img2.png" class="img-responsive">
+					</a>
+
+					<h2 class="post-title">
+						<a href="#">Título de la Imagen 2</a>
+					</h2>
+					<p><span class="post-fecha">12/06/2060</span> por <span><a href="#">Jonatan</a></span></p>
+					<p>Las imagenes son grandes, por lo que se ajustan automaticamente. Los tres artículos estan dentro de un tag 'section', cada uno de ellos con un tag 'article'. Imagen - Título en H2 - Parrafo con spans y href - div conteniendo los dos botones en tag 'a', el último usando un span para el badge.</p>
+
+					<div class="contenedor-botones">
+						<a href="#" class="btn btn-primary">Leer mas!</a>
+						<a href="#" class="btn btn-success">Comentarios 
+							<span class="badge">88</span>
+						</a>
+					</div>
+				</article>
+
+				<br>
+
+				<!-- Artículo 3 -->
+				<article class="post clearfix">
+					<a href="#" class="thumbnail pull-left">
+						<img src="img/img3.png" class="img-responsive">
+					</a>
+
+					<h2 class="post-title">
+						<a href="#">Título de la Imagen 3</a>
+					</h2>
+					<p><span class="post-fecha">31/02/2041</span> por <span><a href="#">Jonatan</a></span></p>
+					<p>Las imagenes son grandes, por lo que se ajustan automaticamente. Los tres artículos estan dentro de un tag 'section', cada uno de ellos con un tag 'article'. Imagen - Título en H2 - Parrafo con spans y href - div conteniendo los dos botones en tag 'a', el último usando un span para el badge.</p>
+
+					<div class="contenedor-botones">
+						<a href="#" class="btn btn-primary">Leer mas!</a>
+						<a href="#" class="btn btn-success">Comentarios 
+							<span class="badge">11</span>
+						</a>
+					</div>
+				</article>
+
+				<!-- Paginación -->
+				<nav>
+					<div class="center-block">
+						<ul class="pagination">
+							<li class="disabled"><a href="#">&laquo;</a></li>
+							<li class="active"><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">&raquo;</a></li>
+						</ul>
+					</div>
+				</nav>
+			</section>
+
+			<!-- Barra de la derecha -->
+			<aside class="col-md-3 hidden-xs hidden-sm pull-right">
+				<h4>Aside para esta parte</h4>
+				<div class="list-group">
+					<a href="#" class="list-group-item active">Diseño Web</a>
+					<a href="#" class="list-group-item">CSS</a>
+					<a href="#" class="list-group-item">Cursos</a>
+					<a href="#" class="list-group-item">Desarrollo Web</a>
+					<a href="#" class="list-group-item">Elementos Web</a>
+					<a href="#" class="list-group-item">Recursos y Herramientas</a>
+				</div>
+
+				<h4>También es el Aside</h4>
+				<a href="#" class="list-group-item">
+					<h4 class="list-group-item-heading">Ambos estan hechos con grupos de listas</h4>
+					<p class="list-group-item-text">Alguna descripción random para explicar a donde te llevaría esto.</p>
+				</a>
+				<a href="#" class="list-group-item">
+					<h4 class="list-group-item-heading">Ambos estan hechos con grupos de listas</h4>
+					<p class="list-group-item-text">Alguna descripción random para explicar a donde te llevaría esto.</p>
+				</a>
+				<a href="#" class="list-group-item">
+					<h4 class="list-group-item-heading">Ambos estan hechos con grupos de listas</h4>
+					<p class="list-group-item-text">Alguna descripción random para explicar a donde te llevaría esto.</p>
+				</a>
+			</aside>
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-6">
+					Footer. Ejercicio de Bootstrap hecho por: <a href="https://www.youtube.com/playlist?list=PLhSj3UTs2_yWTKvu1Aq3xUhzIJNBZ3MFW">FalconMasters.</a>
+				</div>
+				<div class="col-xs-6">
+					<ul class="list-inline text-right">
+						<li><a href="#">Inicio</a></li>
+						<li><a href="#">Cursos</a></li>
+						<li><a href="#">Contacto</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>
